@@ -1,0 +1,20 @@
+{% extends 'blog/base.html' %}
+ {% block content %}
+     {% load crispy_forms_tags %}
+
+
+
+<!-- Comment Form -->
+
+<div class="border p-4 mb-5 ">
+<legend class="border-bottom pb-1 mb-3">change post</legend>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{user_form|crispy}}
+        {{profile_form|crispy}}
+        <input class="btn btn-secondary mt-4" type="submit" value="save" >
+    </form>
+</div>
+
+
+ {% endblock content %}
