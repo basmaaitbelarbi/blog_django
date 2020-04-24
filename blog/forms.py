@@ -1,7 +1,7 @@
 from django import forms
 from .models import Comment, Post
 
-
+#ntest cmass
 class NewComment(forms.ModelForm):
     class Meta:
         model = Comment
